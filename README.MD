@@ -34,3 +34,10 @@ curl http://spring-boot-app-eight.cfapps.io?name=Greg
 curl localhost:9001/actuator/health
 
 http://localhost:9000/application/metrics/http.server.requests
+
+--
+brew install httpie
+
+http --json -v POST localhost:9001/api/images id=10 name=image1
+curl -v -H 'Content-Type:application/json' -X POST -d '{"id":10, "name": "image10"}' localhost:9001/api/images
+curl -v -H 'Content-Type:application/json' -X POST -d '[{"id":11, "name": "image1"}, {"id":12, "name":"image2"}]' localhost:9001/api/images
