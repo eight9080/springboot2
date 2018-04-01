@@ -27,13 +27,13 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb-reactive')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-	compile('org.springframework.boot:spring-boot-starter-webflux')
+//	compile('org.springframework.boot:spring-boot-starter-webflux')
 
-//	compile('org.springframework.boot:spring-boot-starter-webflux') {
-//		exclude group: 'org.springframework.boot',
-//				module: 'spring-boot-starter-reactor-netty'
-//	}
-//	compile('org.springframework.boot:spring-boot-starter-tomcat')
+	compile('org.springframework.boot:spring-boot-starter-webflux') {
+		exclude group: 'org.springframework.boot',
+				module: 'spring-boot-starter-reactor-netty'
+	}
+	compile('org.springframework.boot:spring-boot-starter-tomcat')
 
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.synchronoss.cloud:nio-multipart-parser:1.1.0')
